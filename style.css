@@ -22,7 +22,7 @@ a {
 img {
 	height: 100%;
 	width: 100%;
-	object-fit: cover;
+	object-fit : cover;
 }
 p {
 	color: black;
@@ -274,7 +274,7 @@ p {
 #skills .skill{
 	text-transform: capitalize;
 	width: 500px;
-	margin: 60px auto;
+	margin: 30px auto;
 	padding: 20px;
 }
  #skills .skill h1{
@@ -315,10 +315,101 @@ p {
 	width: 70%;
 	animation: Front 3s;
 } 
+.iot{
+	margin: 0.5px;
+	width: 75%;
+	animation: Front 3s;
+} 
+.py-3 {
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important;
+}
+.mx-auto {
+    margin-right: auto!important;
+    margin-left: auto!important;
+}
 
 /* End of Skills */
 
 
+/* Tech Stack */
+
+/* skills section starts */
+  .tech-stack {
+	min-height: 90vh;
+	background-color:white;
+  }
+  .tech .container {
+	background: white;
+	color: #fff;
+	border-radius: 1rem;
+	padding: 0rem;
+	width: 90%;
+	margin: auto;
+	margin-top: 0rem;
+  }
+  .tech-stack .container .row {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	flex-wrap: wrap;
+	gap: 1.8rem;
+  }
+  .tech-stack .container .bar {
+	margin-bottom: 15px;
+	padding: 10px;
+	border-radius: 1rem;
+	box-shadow: 0 4px 10px rgba(244, 7, 7, 0.2);
+	background: rgba(0, 0, 22, 0.9);
+	transition: 0.2s;
+  }
+  .tech-stack .container .bar:hover {
+	box-shadow: 0 8px 10px rgba(208, 19, 19, 0.8) !important;
+	background-color: rgba(255, 0, 0, 0.8) !important;
+  }
+  .tech-stack .container .bar .info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 1rem;
+  }
+  .tech-stack .container .bar .info i {
+	font-size: 4rem;
+  }
+  .tech-stack .container .bar .info span {
+	font-size: 2rem;
+	font-weight: 500;
+	font-family: "Poppins";
+	margin-left: 0.5rem;
+  }
+  /* skills media queries starts*/
+  @media screen and (max-width: 600px) {
+	.tech-stack .container {
+	  padding: 0;
+	  margin: 0;
+	}
+	.tech-stack .container .row {
+	  grid-template-columns: repeat(2, 1fr);
+	  margin: 0rem;
+	  padding: 0rem 0.2rem 0rem 0.2rem;
+	  gap: 1rem;
+	}
+	.tech-stack .container {
+	  margin-top: 5px;
+	  width: 100%;
+	}
+  }
+
+  @media screen and (min-width : 1000px) {
+	.tech-stack .container .row {
+		grid-template-columns: repeat(7, 1fr);
+		margin: 0.5rem 2rem;
+		padding: 1rem 0.2rem 1rem 0.2rem;
+		gap: 1rem;
+	  }
+  }
+  /* skills media queries ends*/
+  /* skills section ends */
 
 /* Services Section */
 #services .services {
@@ -387,7 +478,7 @@ p {
 	flex-direction: column;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 100px 0;
+	padding: 10px 0 50px 0;
 }
 #projects .projects-header h1 {
 	margin-bottom: 50px;
@@ -442,16 +533,16 @@ p {
 	position: absolute;
 	left: 0;
 	top: 0;
+	background-image: linear-gradient(20deg, #29323c 0%, #454f59 100%);
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	opacity: 0.7;
 }
 #projects .project-img img {
 	transition: 0.3s ease transform;
 }
 #projects .project-item:hover .project-img img {
-	transform: scale(1.1);
+	transform: scale(1.3);
 }
 /* End Projects section */
 
@@ -461,7 +552,14 @@ p {
 	text-align: center;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 100px 20px;
+	padding: 50px 20px;
+}
+.about-container {
+	min-width: 50vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 #about .col-left {
 	width: 250px;

@@ -2,6 +2,8 @@ const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger'
 const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
 const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
 const header = document.querySelector('.header.container');
+const skills= fetch('./students.json');
+console.log(skills);
 
 hamburger.addEventListener('click', () => {
 	hamburger.classList.toggle('active');
@@ -23,3 +25,20 @@ menu_item.forEach((item) => {
 		mobile_menu.classList.toggle('active');
 	});
 });
+
+function showSkills(skills) {
+    let skillsContainer = document.getElementById("skillsContainer");
+    let skillHTML = "";
+    skills.forEach(skill => {
+        skillHTML += `
+        <div class="bar">
+              <div class="info">
+                <img src=${skill.icon} alt="skill" />
+                <span>${skill.name}</span>
+              </div>
+            </div>`
+    });
+    skillsContainer.innerHTML = skillHTML;
+}
+
+showSkills(skills);
